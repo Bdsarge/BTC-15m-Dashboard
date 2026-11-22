@@ -1,0 +1,345 @@
+{
+  "updated_at": "2026-11-22T03:57:47.654104+00:00",
+  "metrics": {
+    "settled_contracts": 36,
+    "paper_predictions": 31,
+    "wins": 12,
+    "win_rate": 0.3871,
+    "gross_pnl": 3.602
+  },
+  "predictions": [
+    {
+      "created_at": "2026-11-22T03:52:20.805611+00:00",
+      "ticker": "KXBTC15M-26NOV212300-00",
+      "direction": "DOWN",
+      "probability": 0.5330998908035892,
+      "cost": 0.18000000000000005,
+      "result": null,
+      "pnl": null
+    },
+    {
+      "created_at": "2026-11-22T03:33:43.158118+00:00",
+      "ticker": "KXBTC15M-26NOV212245-45",
+      "direction": "NO TRADE",
+      "probability": 0.1996843027635335,
+      "cost": null,
+      "result": "no",
+      "pnl": 0.0
+    },
+    {
+      "created_at": "2026-11-22T02:35:40.544027+00:00",
+      "ticker": "KXBTC15M-26NOV212145-45",
+      "direction": "UP",
+      "probability": 0.21611008039892565,
+      "cost": 0.050000000000000044,
+      "result": "no",
+      "pnl": -0.050000000000000044
+    },
+    {
+      "created_at": "2026-11-22T01:42:29.624564+00:00",
+      "ticker": "KXBTC15M-26NOV212045-45",
+      "direction": "UP",
+      "probability": 0.12892457772920018,
+      "cost": 0.03400000000000003,
+      "result": "no",
+      "pnl": -0.03400000000000003
+    },
+    {
+      "created_at": "2026-11-22T00:23:47.585491+00:00",
+      "ticker": "KXBTC15M-26NOV211930-30",
+      "direction": "UP",
+      "probability": 0.6015350333511905,
+      "cost": 0.53,
+      "result": "no",
+      "pnl": -0.53
+    },
+    {
+      "created_at": "2026-11-21T23:47:10.598458+00:00",
+      "ticker": "KXBTC15M-26NOV211900-00",
+      "direction": "DOWN",
+      "probability": 0.6253530820591401,
+      "cost": 0.31999999999999995,
+      "result": "no",
+      "pnl": 0.68
+    },
+    {
+      "created_at": "2026-11-21T23:11:49.632708+00:00",
+      "ticker": "KXBTC15M-26NOV211815-15",
+      "direction": "DOWN",
+      "probability": 0.8986984593894083,
+      "cost": 0.01200000000000001,
+      "result": "yes",
+      "pnl": -0.01200000000000001
+    },
+    {
+      "created_at": "2026-11-21T22:29:19.199150+00:00",
+      "ticker": "KXBTC15M-26NOV211730-30",
+      "direction": "DOWN",
+      "probability": 0.24350117869042942,
+      "cost": 0.06299999999999994,
+      "result": "yes",
+      "pnl": -0.06299999999999994
+    },
+    {
+      "created_at": "2026-11-21T21:49:58.541414+00:00",
+      "ticker": "KXBTC15M-26NOV211700-00",
+      "direction": "UP",
+      "probability": 0.5632253192922039,
+      "cost": 0.33999999999999997,
+      "result": "yes",
+      "pnl": 0.66
+    },
+    {
+      "created_at": "2026-11-21T21:10:10.488943+00:00",
+      "ticker": "KXBTC15M-26NOV211615-15",
+      "direction": "UP",
+      "probability": 0.763632067506251,
+      "cost": 0.69,
+      "result": "yes",
+      "pnl": 0.31000000000000005
+    },
+    {
+      "created_at": "2026-11-21T20:24:16.772956+00:00",
+      "ticker": "KXBTC15M-26NOV211530-30",
+      "direction": "DOWN",
+      "probability": 0.47650204778394006,
+      "cost": 0.21999999999999997,
+      "result": "yes",
+      "pnl": -0.21999999999999997
+    },
+    {
+      "created_at": "2026-11-21T19:39:55.196767+00:00",
+      "ticker": "KXBTC15M-26NOV211445-45",
+      "direction": "DOWN",
+      "probability": 0.7335237370771939,
+      "cost": 0.17000000000000004,
+      "result": "yes",
+      "pnl": -0.17000000000000004
+    },
+    {
+      "created_at": "2026-11-21T18:56:24.508809+00:00",
+      "ticker": "KXBTC15M-26NOV211400-00",
+      "direction": "UP",
+      "probability": 0.33014970168883445,
+      "cost": 0.15000000000000002,
+      "result": "no",
+      "pnl": -0.15000000000000002
+    },
+    {
+      "created_at": "2026-11-21T18:06:24.188305+00:00",
+      "ticker": "KXBTC15M-26NOV211315-15",
+      "direction": "NO TRADE",
+      "probability": 0.715656723065182,
+      "cost": null,
+      "result": "yes",
+      "pnl": 0.0
+    },
+    {
+      "created_at": "2026-11-21T17:25:06.820521+00:00",
+      "ticker": "KXBTC15M-26NOV211230-30",
+      "direction": "UP",
+      "probability": 0.3642848494937243,
+      "cost": 0.22999999999999998,
+      "result": "yes",
+      "pnl": 0.77
+    },
+    {
+      "created_at": "2026-11-21T16:38:32.942363+00:00",
+      "ticker": "KXBTC15M-26NOV211145-45",
+      "direction": "UP",
+      "probability": 0.4251251681905352,
+      "cost": 0.32999999999999996,
+      "result": "no",
+      "pnl": -0.32999999999999996
+    },
+    {
+      "created_at": "2026-11-21T15:58:24.882698+00:00",
+      "ticker": "KXBTC15M-26NOV211100-00",
+      "direction": "UP",
+      "probability": 0.26974958636233104,
+      "cost": 0.0020000000000000018,
+      "result": "no",
+      "pnl": -0.0020000000000000018
+    },
+    {
+      "created_at": "2026-11-21T15:15:41.098037+00:00",
+      "ticker": "KXBTC15M-26NOV211030-30",
+      "direction": "NO TRADE",
+      "probability": 0.28016797636079094,
+      "cost": null,
+      "result": "no",
+      "pnl": 0.0
+    },
+    {
+      "created_at": "2026-11-21T13:41:48.257922+00:00",
+      "ticker": "KXBTC15M-26NOV210845-45",
+      "direction": "DOWN",
+      "probability": 0.9376395848365813,
+      "cost": 0.0020000000000000018,
+      "result": "yes",
+      "pnl": -0.0020000000000000018
+    },
+    {
+      "created_at": "2026-11-21T12:41:22.985666+00:00",
+      "ticker": "KXBTC15M-26NOV210745-45",
+      "direction": "DOWN",
+      "probability": 0.7066524899894174,
+      "cost": 0.01200000000000001,
+      "result": "yes",
+      "pnl": -0.01200000000000001
+    },
+    {
+      "created_at": "2026-11-21T11:54:39.771448+00:00",
+      "ticker": "KXBTC15M-26NOV210700-00",
+      "direction": "UP",
+      "probability": 0.4782270612214612,
+      "cost": 0.30000000000000004,
+      "result": "yes",
+      "pnl": 0.7
+    },
+    {
+      "created_at": "2026-11-21T11:13:41.591205+00:00",
+      "ticker": "KXBTC15M-26NOV210615-15",
+      "direction": "UP",
+      "probability": 0.7456189562562188,
+      "cost": 0.41000000000000003,
+      "result": "yes",
+      "pnl": 0.59
+    },
+    {
+      "created_at": "2026-11-21T10:17:58.450619+00:00",
+      "ticker": "KXBTC15M-26NOV210530-30",
+      "direction": "DOWN",
+      "probability": 0.1884930153793844,
+      "cost": 0.52,
+      "result": "yes",
+      "pnl": -0.52
+    },
+    {
+      "created_at": "2026-11-21T08:42:00.701785+00:00",
+      "ticker": "KXBTC15M-26NOV210345-45",
+      "direction": "DOWN",
+      "probability": 0.5455030826256227,
+      "cost": 0.31000000000000005,
+      "result": "yes",
+      "pnl": -0.31000000000000005
+    },
+    {
+      "created_at": "2026-11-21T07:53:19.832958+00:00",
+      "ticker": "KXBTC15M-26NOV210300-00",
+      "direction": "DOWN",
+      "probability": 0.1291636482922116,
+      "cost": 0.77,
+      "result": "no",
+      "pnl": 0.22999999999999998
+    },
+    {
+      "created_at": "2026-11-21T06:40:04.140746+00:00",
+      "ticker": "KXBTC15M-26NOV210145-45",
+      "direction": "DOWN",
+      "probability": 0.694952360779198,
+      "cost": 0.007000000000000006,
+      "result": "yes",
+      "pnl": -0.007000000000000006
+    },
+    {
+      "created_at": "2026-11-21T05:37:19.819559+00:00",
+      "ticker": "KXBTC15M-26NOV210045-45",
+      "direction": "DOWN",
+      "probability": 0.05692302777197672,
+      "cost": 0.911,
+      "result": "no",
+      "pnl": 0.08899999999999997
+    },
+    {
+      "created_at": "2026-11-21T04:39:06.833960+00:00",
+      "ticker": "KXBTC15M-26NOV202345-45",
+      "direction": "DOWN",
+      "probability": 0.7392591053480628,
+      "cost": 0.09499999999999997,
+      "result": "yes",
+      "pnl": -0.09499999999999997
+    },
+    {
+      "created_at": "2026-11-21T02:49:48.242312+00:00",
+      "ticker": "KXBTC15M-26NOV202200-00",
+      "direction": "DOWN",
+      "probability": 0.4374184061209523,
+      "cost": 0.36,
+      "result": "no",
+      "pnl": 0.64
+    },
+    {
+      "created_at": "2026-11-21T02:01:59.296954+00:00",
+      "ticker": "KXBTC15M-26NOV202115-15",
+      "direction": "UP",
+      "probability": 0.7494569317942409,
+      "cost": 0.54,
+      "result": "yes",
+      "pnl": 0.45999999999999996
+    },
+    {
+      "created_at": "2026-11-21T00:48:25.928551+00:00",
+      "ticker": "KXBTC15M-26NOV202000-00",
+      "direction": "DOWN",
+      "probability": 0.5929288459614174,
+      "cost": 0.31000000000000005,
+      "result": "no",
+      "pnl": 0.69
+    },
+    {
+      "created_at": "2026-11-20T23:57:08.713314+00:00",
+      "ticker": "KXBTC15M-26NOV201900-00",
+      "direction": "NO TRADE",
+      "probability": 0.05,
+      "cost": null,
+      "result": "no",
+      "pnl": 0.0
+    },
+    {
+      "created_at": "2026-11-20T23:13:34.779380+00:00",
+      "ticker": "KXBTC15M-26NOV201815-15",
+      "direction": "DOWN",
+      "probability": 0.40083777922937724,
+      "cost": 0.10999999999999999,
+      "result": "no",
+      "pnl": 0.89
+    },
+    {
+      "created_at": "2026-11-20T22:27:02.150754+00:00",
+      "ticker": "KXBTC15M-26NOV201730-30",
+      "direction": "NO TRADE",
+      "probability": 0.1434455011238045,
+      "cost": null,
+      "result": "no",
+      "pnl": 0.0
+    },
+    {
+      "created_at": "2026-11-20T21:38:29.315763+00:00",
+      "ticker": "KXBTC15M-26NOV201645-45",
+      "direction": "DOWN",
+      "probability": 0.7662094449098964,
+      "cost": 0.08799999999999997,
+      "result": "yes",
+      "pnl": -0.08799999999999997
+    },
+    {
+      "created_at": "2026-11-20T20:48:27.433205+00:00",
+      "ticker": "KXBTC15M-26NOV201600-00",
+      "direction": "UP",
+      "probability": 0.6511358889731814,
+      "cost": 0.51,
+      "result": "no",
+      "pnl": -0.51
+    },
+    {
+      "created_at": "2026-11-20T19:58:05.461761+00:00",
+      "ticker": "KXBTC15M-26NOV201500-00",
+      "direction": "UP",
+      "probability": 0.287876883928194,
+      "cost": 0.0020000000000000018,
+      "result": "no",
+      "pnl": -0.0020000000000000018
+    }
+  ]
+}
