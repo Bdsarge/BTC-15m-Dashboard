@@ -3,28 +3,52 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1020">
 <title>BTC15M Paper Lab</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#0b1020;color:#eef2ff;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;padding:22px}
+body{margin:0;background:#0b1020;color:#eef2ff;font-family:-apple-system,Arial,sans-serif;padding:20px 16px 40px}
 main{max-width:1000px;margin:auto}
-h1{font-size:27px;margin-bottom:4px}
-.sub{color:#94a3b8;font-size:13px;margin-bottom:25px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{background:#172238;border:1px solid #29374e;border-radius:14px;padding:17px}
-.label{font-size:12px;color:#a2b0c5}
-.value{font-size:27px;font-weight:750;margin-top:8px}
-small{color:#94a3b8}
-h2{font-size:18px;margin-top:28px}
+h1{font-size:26px;margin:5px 0}
+.sub,small,.label{color:#94a3b8}
+.sub{font-size:13px;margin-bottom:22px}
+.grid,.versions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.card,.prediction{background:#172238;border:1px solid #29374e;border-radius:14px;padding:15px;min-width:0}
+.label{font-size:12px}
+.value{font-size:clamp(21px,5vw,29px);font-weight:750;margin:8px 0}
+small{font-size:12px}
+h2{font-size:18px;margin:26px 0 12px}
 .green{color:#57dfaa}
 .red{color:#fb7185}
-table{width:100%;border-collapse:collapse;font-size:12px}
-th,td{text-align:left;padding:12px 9px;border-bottom:1px solid #334155;white-space:nowrap}
-th{color:#94a3b8}
-.scroll{overflow-x:auto}
-.notice{margin-top:22px;line-height:1.6;color:#a2b0c5;font-size:13px}
+.progress{height:11px;background:#334155;border-radius:20px;margin:14px 0;overflow:hidden}
+.progress div{height:100%;background:#57dfaa}
+.statline{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #29374e;padding:8px 0;font-size:12px}
+.statline span{color:#94a3b8}
+.statline strong{text-align:right}
+.version-title{font-weight:700;margin-bottom:10px}
+.chart-wrap{height:230px;margin-top:12px}
+canvas{width:100%;height:100%;display:block}
+.legend{font-size:12px;color:#94a3b8;margin-top:12px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#57dfaa;margin-right:5px}
+.blue{background:#7aa8ff}
+.predictions{display:grid;gap:10px}
+.prediction-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pill{border:1px solid #41536c;border-radius:7px;padding:5px 8px;font-size:12px;font-weight:700}
+.up{color:#57dfaa}
+.down{color:#f9bd72}
+.pred-time,.ticker{color:#94a3b8;font-size:11px}
+.ticker{overflow-wrap:anywhere;margin:11px 0}
+.pred-details{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px}
+.pred-details span{display:block;color:#94a3b8;font-size:11px;margin-bottom:4px}
+.pred-details b{font-size:13px}
+.notice{margin-top:24px;color:#a2b0c5;font-size:13px;line-height:1.6}
 button{background:#30486f;border:0;border-radius:9px;color:white;padding:11px 17px;font-weight:600}
+@media(min-width:680px){
+.grid{grid-template-columns:repeat(4,1fr)}
+.predictions{grid-template-columns:repeat(2,1fr)}
+.chart-wrap{height:280px}
+}
 </style>
 </head>
 <body>
@@ -39,92 +63,200 @@ button{background:#30486f;border:0;border-radius:9px;color:white;padding:11px 17
 <small id="wins">Waiting for data</small>
 </div>
 <div class="card">
-<div class="label">Gross paper P&L</div>
+<div class="label">Gross paper P&amp;L</div>
 <div class="value" id="pnl">—</div>
 <small>Before fees and slippage</small>
 </div>
 <div class="card">
-<div class="label">Paper predictions</div>
+<div class="label">Paper trades</div>
 <div class="value" id="predictions">—</div>
-<small>Recorded by the bot</small>
+<small>Settled trade signals</small>
 </div>
 <div class="card">
 <div class="label">Settled contracts</div>
 <div class="value" id="settled">—</div>
-<small>Completed BTC markets</small>
+<small>Includes no-trade observations</small>
 </div>
 </div>
 
 <h2>Performance</h2>
 <div class="card">
-<div class="label">Historical win rate</div>
-<div style="height:12px;background:#334155;border-radius:20px;margin:14px 0;overflow:hidden">
-<div id="bar" style="height:100%;width:0;background:#57dfaa"></div>
-</div>
+<div class="label">Historical trade win rate</div>
+<div class="progress"><div id="bar" style="width:0"></div></div>
 <small id="performance">No data loaded yet</small>
 </div>
 
+<h2>Model comparison</h2>
+<div class="versions">
+<div class="card" id="v1">
+<div class="version-title">Version 1</div>
+<div class="statline"><span>Trades</span><strong data-key="paper_predictions">—</strong></div>
+<div class="statline"><span>Win rate</span><strong data-key="win_rate">—</strong></div>
+<div class="statline"><span>Gross P&amp;L</span><strong data-key="gross_pnl">—</strong></div>
+<div class="statline"><span>Est. net P&amp;L</span><strong data-key="estimated_net_pnl">—</strong></div>
+</div>
+<div class="card" id="v2">
+<div class="version-title">Version 2</div>
+<div class="statline"><span>Trades</span><strong data-key="paper_predictions">—</strong></div>
+<div class="statline"><span>Win rate</span><strong data-key="win_rate">—</strong></div>
+<div class="statline"><span>Gross P&amp;L</span><strong data-key="gross_pnl">—</strong></div>
+<div class="statline"><span>Est. net P&amp;L</span><strong data-key="estimated_net_pnl">—</strong></div>
+</div>
+</div>
+
+<h2>Equity curve</h2>
+<div class="card">
+<div class="label">Cumulative simulated P&amp;L</div>
+<div class="chart-wrap"><canvas id="equity"></canvas></div>
+<div class="legend">
+<span class="dot"></span>Gross P&amp;L
+&nbsp;&nbsp;
+<span class="dot blue"></span>V2 estimated net
+</div>
+<small>V2 net values may be incomplete. Points are ordered by prediction time.</small>
+</div>
+
 <h2>Recent predictions</h2>
-<div class="card scroll">
-<table>
-<thead>
-<tr>
-<th>Time (UTC)</th>
-<th>Market</th>
-<th>Signal</th>
-<th>Probability</th>
-<th>Cost</th>
-<th>Result</th>
-<th>P&L</th>
-</tr>
-</thead>
-<tbody id="history">
-<tr><td colspan="7">Waiting for data...</td></tr>
-</tbody>
-</table>
+<div class="predictions" id="history">
+<div class="card">Waiting for data...</div>
 </div>
 
 <div class="notice">
-<p id="updated">Data connection not configured yet.</p>
-<p>Research only. No live orders are placed. Model probabilities are uncalibrated. Gross results exclude fees, slippage, and execution uncertainty.</p>
+<p id="updated">Waiting for published data.</p>
+<p>Research only. No live orders. Probabilities are uncalibrated estimates of P(UP), including on DOWN signals. Gross results exclude fees and slippage. Estimated net results are not verified executable returns.</p>
 <button onclick="load()">Refresh dashboard</button>
 </div>
 </main>
 
 <script>
 const $=id=>document.getElementById(id);
-const money=n=>n==null?'—':'$'+Number(n).toFixed(3);
-const escapeHTML=s=>String(s??'—').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+const money=n=>n==null?'—':(Number(n)<0?'−$':'$')+Math.abs(Number(n)).toFixed(3);
+const pct=n=>n==null?'—':(Number(n)*100).toFixed(1)+'%';
+const esc=s=>String(s??'—').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+const tone=n=>n==null?'':Number(n)>=0?'green':'red';
+let chartPoints=[];
+
+function versionCard(id,m){
+ const values={
+  paper_predictions:m?.paper_predictions??'—',
+  win_rate:pct(m?.win_rate),
+  gross_pnl:money(m?.gross_pnl),
+  estimated_net_pnl:money(m?.estimated_net_pnl)
+ };
+ for(const el of $(id).querySelectorAll('[data-key]')){
+  const key=el.dataset.key;
+  el.textContent=values[key];
+  el.className=key.endsWith('pnl')&&m?.[key]!=null?tone(m[key]):'';
+ }
+}
+
+function draw(){
+ const canvas=$('equity');
+ const rect=canvas.getBoundingClientRect();
+ const w=rect.width,h=rect.height;
+ if(w<10)return;
+ const dpr=Math.min(devicePixelRatio||1,2);
+ canvas.width=w*dpr;
+ canvas.height=h*dpr;
+ const ctx=canvas.getContext('2d');
+ ctx.scale(dpr,dpr);
+ ctx.clearRect(0,0,w,h);
+ const pts=chartPoints.filter(x=>x&&Number.isFinite(Number(x.gross)));
+ if(!pts.length){
+  ctx.fillStyle='#94a3b8';
+  ctx.font='13px Arial';
+  ctx.fillText('No settled trades yet',12,h/2);
+  return;
+ }
+ const gross=pts.map(x=>Number(x.gross));
+ const net=pts.map(x=>x.v2_estimated_net==null?null:Number(x.v2_estimated_net));
+ const values=[0,...gross,...net.filter(x=>x!==null&&Number.isFinite(x))];
+ let lo=Math.min(...values),hi=Math.max(...values);
+ if(lo===hi){lo-=1;hi+=1;}
+ const pad=(hi-lo)*.12;
+ lo-=pad;hi+=pad;
+ const left=48,right=12,top=15,bottom=27;
+ const X=i=>left+(pts.length===1?.5:i/(pts.length-1))*(w-left-right);
+ const Y=v=>top+(hi-v)/(hi-lo)*(h-top-bottom);
+ ctx.font='11px Arial';
+ for(let j=0;j<=4;j++){
+  const val=lo+(hi-lo)*j/4,y=Y(val);
+  ctx.strokeStyle='#34435a';
+  ctx.beginPath();
+  ctx.moveTo(left,y);
+  ctx.lineTo(w-right,y);
+  ctx.stroke();
+  ctx.fillStyle='#94a3b8';
+  ctx.fillText((val<0?'−':'')+'$'+Math.abs(val).toFixed(2),2,y+4);
+ }
+ function line(arr,color){
+  ctx.strokeStyle=color;
+  ctx.lineWidth=2;
+  ctx.beginPath();
+  let started=false;
+  arr.forEach((v,i)=>{
+   if(v==null||!Number.isFinite(v))return;
+   const x=X(i),y=Y(v);
+   if(!started){ctx.moveTo(x,y);started=true;}
+   else ctx.lineTo(x,y);
+  });
+  if(started)ctx.stroke();
+ }
+ line(gross,'#57dfaa');
+ line(net,'#7aa8ff');
+ ctx.fillStyle='#94a3b8';
+ ctx.fillText('Oldest',left,h-6);
+ ctx.fillText('Newest',Math.max(left,w-56),h-6);
+}
+
+function card(r){
+ const dir=String(r.direction||'NO TRADE');
+ const cls=dir.toLowerCase().replace(/\s+/g,'-');
+ const when=r.created_at?String(r.created_at).replace('T',' ').slice(0,19)+' UTC':'—';
+ const ver=r.model_version||'heuristic-v1';
+ return `<article class="prediction">
+ <div class="prediction-top">
+ <span class="pill ${esc(cls)}">${esc(dir)}</span>
+ <span class="pred-time">${esc(when)}</span>
+ </div>
+ <div class="ticker">${esc(r.ticker)} · ${esc(ver)}</div>
+ <div class="pred-details">
+ <div><span>P(UP)</span><b>${pct(r.probability)}</b></div>
+ <div><span>Entry cost</span><b>${money(r.cost)}</b></div>
+ <div><span>Settlement</span><b>${esc(r.result)}</b></div>
+ <div><span>Gross P&amp;L</span><b class="${tone(r.pnl)}">${money(r.pnl)}</b></div>
+ <div><span>Est. net P&amp;L</span><b class="${tone(r.net_pnl)}">${money(r.net_pnl)}</b></div>
+ <div><span>Time remaining</span><b>${r.minutes_remaining==null?'—':Number(r.minutes_remaining).toFixed(1)+' min'}</b></div>
+ </div>
+ </article>`;
+}
+
 async function load(){
  try{
-  const response=await fetch('./data.json?t='+Date.now());
-  if(!response.ok)throw Error('Data not published yet');
-  const d=await response.json();
-  const m=d.metrics||{};
+  const response=await fetch('./data.json?t='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw Error('Data not published');
+  const d=await response.json(),m=d.metrics||{};
   const rate=Number(m.win_rate||0)*100;
   $('accuracy').textContent=rate.toFixed(1)+'%';
-  $('wins').textContent=(m.wins||0)+' winning predictions';
+  $('wins').textContent=(m.wins??0)+' winning trades';
   $('pnl').textContent=money(m.gross_pnl);
-  $('pnl').className='value '+(m.gross_pnl>=0?'green':'red');
+  $('pnl').className='value '+tone(m.gross_pnl);
   $('predictions').textContent=m.paper_predictions??'—';
   $('settled').textContent=m.settled_contracts??'—';
   $('bar').style.width=Math.max(0,Math.min(100,rate))+'%';
-  $('performance').textContent=(m.wins||0)+' wins · '+(m.paper_predictions||0)+' paper predictions';
-  $('updated').textContent='Last updated: '+(d.updated_at||'—');
+  $('performance').textContent=(m.wins??0)+' wins · '+(m.paper_predictions??0)+' settled paper trades';
+  versionCard('v1',d.versions?.['heuristic-v1']);
+  versionCard('v2',d.versions?.['heuristic-v2']);
+  chartPoints=Array.isArray(d.equity_curve)?d.equity_curve:[];
+  draw();
   const rows=Array.isArray(d.predictions)?d.predictions:[];
-  $('history').innerHTML=rows.length?rows.map(r=>
-   '<tr><td>'+escapeHTML(r.created_at?.slice(0,19))+
-   '</td><td>'+escapeHTML(r.ticker)+
-   '</td><td>'+escapeHTML(r.direction)+
-   '</td><td>'+(r.probability==null?'—':(r.probability*100).toFixed(1)+'%')+
-   '</td><td>'+money(r.cost)+
-   '</td><td>'+escapeHTML(r.result)+
-   '</td><td>'+money(r.pnl)+'</td></tr>'
-  ).join(''):'<tr><td colspan="7">No predictions yet</td></tr>';
+  $('history').innerHTML=rows.length?rows.map(card).join(''):'<div class="card">No predictions yet</div>';
+  $('updated').textContent='Last published: '+(d.updated_at||'—');
  }catch(e){
   $('updated').textContent='Waiting for published data: '+e.message;
  }
 }
+window.addEventListener('resize',draw);
 load();
 setInterval(load,60000);
 </script>
