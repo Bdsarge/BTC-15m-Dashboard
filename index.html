@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTC15M Paper Lab</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1020;color:#eef2ff;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;padding:22px}
+main{max-width:1000px;margin:auto}
+h1{font-size:27px;margin-bottom:4px}
+.sub{color:#94a3b8;font-size:13px;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:#172238;border:1px solid #29374e;border-radius:14px;padding:17px}
+.label{font-size:12px;color:#a2b0c5}
+.value{font-size:27px;font-weight:750;margin-top:8px}
+small{color:#94a3b8}
+h2{font-size:18px;margin-top:28px}
+.green{color:#57dfaa}
+.red{color:#fb7185}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{text-align:left;padding:12px 9px;border-bottom:1px solid #334155;white-space:nowrap}
+th{color:#94a3b8}
+.scroll{overflow-x:auto}
+.notice{margin-top:22px;line-height:1.6;color:#a2b0c5;font-size:13px}
+button{background:#30486f;border:0;border-radius:9px;color:white;padding:11px 17px;font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<h1>₿ BTC15M Paper Lab</h1>
+<div class="sub">Kalshi · Coinbase · Automated paper-trading research</div>
+
+<div class="grid">
+<div class="card">
+<div class="label">Prediction win rate</div>
+<div class="value" id="accuracy">—</div>
+<small id="wins">Waiting for data</small>
+</div>
+<div class="card">
+<div class="label">Gross paper P&L</div>
+<div class="value" id="pnl">—</div>
+<small>Before fees and slippage</small>
+</div>
+<div class="card">
+<div class="label">Paper predictions</div>
+<div class="value" id="predictions">—</div>
+<small>Recorded by the bot</small>
+</div>
+<div class="card">
+<div class="label">Settled contracts</div>
+<div class="value" id="settled">—</div>
+<small>Completed BTC markets</small>
+</div>
+</div>
+
+<h2>Performance</h2>
+<div class="card">
+<div class="label">Historical win rate</div>
+<div style="height:12px;background:#334155;border-radius:20px;margin:14px 0;overflow:hidden">
+<div id="bar" style="height:100%;width:0;background:#57dfaa"></div>
+</div>
+<small id="performance">No data loaded yet</small>
+</div>
+
+<h2>Recent predictions</h2>
+<div class="card scroll">
+<table>
+<thead>
+<tr>
+<th>Time (UTC)</th>
+<th>Market</th>
+<th>Signal</th>
+<th>Probability</th>
+<th>Cost</th>
+<th>Result</th>
+<th>P&L</th>
+</tr>
+</thead>
+<tbody id="history">
+<tr><td colspan="7">Waiting for data...</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="notice">
+<p id="updated">Data connection not configured yet.</p>
+<p>Research only. No live orders are placed. Model probabilities are uncalibrated. Gross results exclude fees, slippage, and execution uncertainty.</p>
+<button onclick="load()">Refresh dashboard</button>
+</div>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>n==null?'—':'$'+Number(n).toFixed(3);
+const escapeHTML=s=>String(s??'—').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+async function load(){
+ try{
+  const response=await fetch('./data.json?t='+Date.now());
+  if(!response.ok)throw Error('Data not published yet');
+  const d=await response.json();
+  const m=d.metrics||{};
+  const rate=Number(m.win_rate||0)*100;
+  $('accuracy').textContent=rate.toFixed(1)+'%';
+  $('wins').textContent=(m.wins||0)+' winning predictions';
+  $('pnl').textContent=money(m.gross_pnl);
+  $('pnl').className='value '+(m.gross_pnl>=0?'green':'red');
+  $('predictions').textContent=m.paper_predictions??'—';
+  $('settled').textContent=m.settled_contracts??'—';
+  $('bar').style.width=Math.max(0,Math.min(100,rate))+'%';
+  $('performance').textContent=(m.wins||0)+' wins · '+(m.paper_predictions||0)+' paper predictions';
+  $('updated').textContent='Last updated: '+(d.updated_at||'—');
+  const rows=Array.isArray(d.predictions)?d.predictions:[];
+  $('history').innerHTML=rows.length?rows.map(r=>
+   '<tr><td>'+escapeHTML(r.created_at?.slice(0,19))+
+   '</td><td>'+escapeHTML(r.ticker)+
+   '</td><td>'+escapeHTML(r.direction)+
+   '</td><td>'+(r.probability==null?'—':(r.probability*100).toFixed(1)+'%')+
+   '</td><td>'+money(r.cost)+
+   '</td><td>'+escapeHTML(r.result)+
+   '</td><td>'+money(r.pnl)+'</td></tr>'
+  ).join(''):'<tr><td colspan="7">No predictions yet</td></tr>';
+ }catch(e){
+  $('updated').textContent='Waiting for published data: '+e.message;
+ }
+}
+load();
+setInterval(load,60000);
+</script>
+</body>
+</html>
