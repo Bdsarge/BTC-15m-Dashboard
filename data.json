@@ -1,12 +1,228 @@
 {
-  "updated_at": "2026-11-22T04:23:11.175927+00:00",
+  "updated_at": "2026-11-22T04:26:53.745608+00:00",
   "metrics": {
     "settled_contracts": 37,
     "paper_predictions": 32,
     "wins": 12,
     "win_rate": 0.375,
-    "gross_pnl": 3.422
+    "gross_pnl": 3.422,
+    "estimated_net_pnl": null,
+    "net_pnl_coverage": 0
   },
+  "versions": {
+    "heuristic-v1": {
+      "settled_contracts": 37,
+      "paper_predictions": 32,
+      "wins": 12,
+      "win_rate": 0.375,
+      "gross_pnl": 3.422,
+      "estimated_net_pnl": null,
+      "net_pnl_coverage": 0
+    },
+    "heuristic-v2": {
+      "settled_contracts": 0,
+      "paper_predictions": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "gross_pnl": 0,
+      "estimated_net_pnl": null,
+      "net_pnl_coverage": 0
+    }
+  },
+  "equity_curve": [
+    {
+      "time": "2026-11-20T19:58:05.461761+00:00",
+      "ticker": "KXBTC15M-26NOV201500-00",
+      "gross": -0.002,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-20T20:48:27.433205+00:00",
+      "ticker": "KXBTC15M-26NOV201600-00",
+      "gross": -0.512,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-20T21:38:29.315763+00:00",
+      "ticker": "KXBTC15M-26NOV201645-45",
+      "gross": -0.6,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-20T23:13:34.779380+00:00",
+      "ticker": "KXBTC15M-26NOV201815-15",
+      "gross": 0.29,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T00:48:25.928551+00:00",
+      "ticker": "KXBTC15M-26NOV202000-00",
+      "gross": 0.98,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T02:01:59.296954+00:00",
+      "ticker": "KXBTC15M-26NOV202115-15",
+      "gross": 1.44,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T02:49:48.242312+00:00",
+      "ticker": "KXBTC15M-26NOV202200-00",
+      "gross": 2.08,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T04:39:06.833960+00:00",
+      "ticker": "KXBTC15M-26NOV202345-45",
+      "gross": 1.985,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T05:37:19.819559+00:00",
+      "ticker": "KXBTC15M-26NOV210045-45",
+      "gross": 2.074,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T06:40:04.140746+00:00",
+      "ticker": "KXBTC15M-26NOV210145-45",
+      "gross": 2.067,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T07:53:19.832958+00:00",
+      "ticker": "KXBTC15M-26NOV210300-00",
+      "gross": 2.297,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T08:42:00.701785+00:00",
+      "ticker": "KXBTC15M-26NOV210345-45",
+      "gross": 1.987,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T10:17:58.450619+00:00",
+      "ticker": "KXBTC15M-26NOV210530-30",
+      "gross": 1.467,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T11:13:41.591205+00:00",
+      "ticker": "KXBTC15M-26NOV210615-15",
+      "gross": 2.057,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T11:54:39.771448+00:00",
+      "ticker": "KXBTC15M-26NOV210700-00",
+      "gross": 2.757,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T12:41:22.985666+00:00",
+      "ticker": "KXBTC15M-26NOV210745-45",
+      "gross": 2.745,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T13:41:48.257922+00:00",
+      "ticker": "KXBTC15M-26NOV210845-45",
+      "gross": 2.743,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T15:58:24.882698+00:00",
+      "ticker": "KXBTC15M-26NOV211100-00",
+      "gross": 2.741,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T16:38:32.942363+00:00",
+      "ticker": "KXBTC15M-26NOV211145-45",
+      "gross": 2.411,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T17:25:06.820521+00:00",
+      "ticker": "KXBTC15M-26NOV211230-30",
+      "gross": 3.181,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T18:56:24.508809+00:00",
+      "ticker": "KXBTC15M-26NOV211400-00",
+      "gross": 3.031,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T19:39:55.196767+00:00",
+      "ticker": "KXBTC15M-26NOV211445-45",
+      "gross": 2.861,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T20:24:16.772956+00:00",
+      "ticker": "KXBTC15M-26NOV211530-30",
+      "gross": 2.641,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T21:10:10.488943+00:00",
+      "ticker": "KXBTC15M-26NOV211615-15",
+      "gross": 2.951,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T21:49:58.541414+00:00",
+      "ticker": "KXBTC15M-26NOV211700-00",
+      "gross": 3.611,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T22:29:19.199150+00:00",
+      "ticker": "KXBTC15M-26NOV211730-30",
+      "gross": 3.548,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T23:11:49.632708+00:00",
+      "ticker": "KXBTC15M-26NOV211815-15",
+      "gross": 3.536,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-21T23:47:10.598458+00:00",
+      "ticker": "KXBTC15M-26NOV211900-00",
+      "gross": 4.216,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-22T00:23:47.585491+00:00",
+      "ticker": "KXBTC15M-26NOV211930-30",
+      "gross": 3.686,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-22T01:42:29.624564+00:00",
+      "ticker": "KXBTC15M-26NOV212045-45",
+      "gross": 3.652,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-22T02:35:40.544027+00:00",
+      "ticker": "KXBTC15M-26NOV212145-45",
+      "gross": 3.602,
+      "v2_estimated_net": 0.0
+    },
+    {
+      "time": "2026-11-22T03:52:20.805611+00:00",
+      "ticker": "KXBTC15M-26NOV212300-00",
+      "gross": 3.422,
+      "v2_estimated_net": 0.0
+    }
+  ],
   "predictions": [
     {
       "created_at": "2026-11-22T04:23:11.043370+00:00",
@@ -15,7 +231,11 @@
       "probability": 0.06236063372610878,
       "cost": null,
       "result": null,
-      "pnl": null
+      "pnl": null,
+      "model_version": "heuristic-v2",
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": 6.82
     },
     {
       "created_at": "2026-11-22T03:52:20.805611+00:00",
@@ -24,7 +244,11 @@
       "probability": 0.5330998908035892,
       "cost": 0.18000000000000005,
       "result": "yes",
-      "pnl": -0.18000000000000005
+      "pnl": -0.18000000000000005,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-22T03:33:43.158118+00:00",
@@ -33,7 +257,11 @@
       "probability": 0.1996843027635335,
       "cost": null,
       "result": "no",
-      "pnl": 0.0
+      "pnl": 0.0,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-22T02:35:40.544027+00:00",
@@ -42,7 +270,11 @@
       "probability": 0.21611008039892565,
       "cost": 0.050000000000000044,
       "result": "no",
-      "pnl": -0.050000000000000044
+      "pnl": -0.050000000000000044,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-22T01:42:29.624564+00:00",
@@ -51,7 +283,11 @@
       "probability": 0.12892457772920018,
       "cost": 0.03400000000000003,
       "result": "no",
-      "pnl": -0.03400000000000003
+      "pnl": -0.03400000000000003,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-22T00:23:47.585491+00:00",
@@ -60,7 +296,11 @@
       "probability": 0.6015350333511905,
       "cost": 0.53,
       "result": "no",
-      "pnl": -0.53
+      "pnl": -0.53,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T23:47:10.598458+00:00",
@@ -69,7 +309,11 @@
       "probability": 0.6253530820591401,
       "cost": 0.31999999999999995,
       "result": "no",
-      "pnl": 0.68
+      "pnl": 0.68,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T23:11:49.632708+00:00",
@@ -78,7 +322,11 @@
       "probability": 0.8986984593894083,
       "cost": 0.01200000000000001,
       "result": "yes",
-      "pnl": -0.01200000000000001
+      "pnl": -0.01200000000000001,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T22:29:19.199150+00:00",
@@ -87,7 +335,11 @@
       "probability": 0.24350117869042942,
       "cost": 0.06299999999999994,
       "result": "yes",
-      "pnl": -0.06299999999999994
+      "pnl": -0.06299999999999994,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T21:49:58.541414+00:00",
@@ -96,7 +348,11 @@
       "probability": 0.5632253192922039,
       "cost": 0.33999999999999997,
       "result": "yes",
-      "pnl": 0.66
+      "pnl": 0.66,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T21:10:10.488943+00:00",
@@ -105,7 +361,11 @@
       "probability": 0.763632067506251,
       "cost": 0.69,
       "result": "yes",
-      "pnl": 0.31000000000000005
+      "pnl": 0.31000000000000005,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T20:24:16.772956+00:00",
@@ -114,7 +374,11 @@
       "probability": 0.47650204778394006,
       "cost": 0.21999999999999997,
       "result": "yes",
-      "pnl": -0.21999999999999997
+      "pnl": -0.21999999999999997,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T19:39:55.196767+00:00",
@@ -123,7 +387,11 @@
       "probability": 0.7335237370771939,
       "cost": 0.17000000000000004,
       "result": "yes",
-      "pnl": -0.17000000000000004
+      "pnl": -0.17000000000000004,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T18:56:24.508809+00:00",
@@ -132,7 +400,11 @@
       "probability": 0.33014970168883445,
       "cost": 0.15000000000000002,
       "result": "no",
-      "pnl": -0.15000000000000002
+      "pnl": -0.15000000000000002,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T18:06:24.188305+00:00",
@@ -141,7 +413,11 @@
       "probability": 0.715656723065182,
       "cost": null,
       "result": "yes",
-      "pnl": 0.0
+      "pnl": 0.0,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T17:25:06.820521+00:00",
@@ -150,7 +426,11 @@
       "probability": 0.3642848494937243,
       "cost": 0.22999999999999998,
       "result": "yes",
-      "pnl": 0.77
+      "pnl": 0.77,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T16:38:32.942363+00:00",
@@ -159,7 +439,11 @@
       "probability": 0.4251251681905352,
       "cost": 0.32999999999999996,
       "result": "no",
-      "pnl": -0.32999999999999996
+      "pnl": -0.32999999999999996,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T15:58:24.882698+00:00",
@@ -168,7 +452,11 @@
       "probability": 0.26974958636233104,
       "cost": 0.0020000000000000018,
       "result": "no",
-      "pnl": -0.0020000000000000018
+      "pnl": -0.0020000000000000018,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T15:15:41.098037+00:00",
@@ -177,7 +465,11 @@
       "probability": 0.28016797636079094,
       "cost": null,
       "result": "no",
-      "pnl": 0.0
+      "pnl": 0.0,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T13:41:48.257922+00:00",
@@ -186,7 +478,11 @@
       "probability": 0.9376395848365813,
       "cost": 0.0020000000000000018,
       "result": "yes",
-      "pnl": -0.0020000000000000018
+      "pnl": -0.0020000000000000018,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T12:41:22.985666+00:00",
@@ -195,7 +491,11 @@
       "probability": 0.7066524899894174,
       "cost": 0.01200000000000001,
       "result": "yes",
-      "pnl": -0.01200000000000001
+      "pnl": -0.01200000000000001,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T11:54:39.771448+00:00",
@@ -204,7 +504,11 @@
       "probability": 0.4782270612214612,
       "cost": 0.30000000000000004,
       "result": "yes",
-      "pnl": 0.7
+      "pnl": 0.7,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T11:13:41.591205+00:00",
@@ -213,7 +517,11 @@
       "probability": 0.7456189562562188,
       "cost": 0.41000000000000003,
       "result": "yes",
-      "pnl": 0.59
+      "pnl": 0.59,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T10:17:58.450619+00:00",
@@ -222,7 +530,11 @@
       "probability": 0.1884930153793844,
       "cost": 0.52,
       "result": "yes",
-      "pnl": -0.52
+      "pnl": -0.52,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T08:42:00.701785+00:00",
@@ -231,7 +543,11 @@
       "probability": 0.5455030826256227,
       "cost": 0.31000000000000005,
       "result": "yes",
-      "pnl": -0.31000000000000005
+      "pnl": -0.31000000000000005,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T07:53:19.832958+00:00",
@@ -240,7 +556,11 @@
       "probability": 0.1291636482922116,
       "cost": 0.77,
       "result": "no",
-      "pnl": 0.22999999999999998
+      "pnl": 0.22999999999999998,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T06:40:04.140746+00:00",
@@ -249,7 +569,11 @@
       "probability": 0.694952360779198,
       "cost": 0.007000000000000006,
       "result": "yes",
-      "pnl": -0.007000000000000006
+      "pnl": -0.007000000000000006,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T05:37:19.819559+00:00",
@@ -258,7 +582,11 @@
       "probability": 0.05692302777197672,
       "cost": 0.911,
       "result": "no",
-      "pnl": 0.08899999999999997
+      "pnl": 0.08899999999999997,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T04:39:06.833960+00:00",
@@ -267,7 +595,11 @@
       "probability": 0.7392591053480628,
       "cost": 0.09499999999999997,
       "result": "yes",
-      "pnl": -0.09499999999999997
+      "pnl": -0.09499999999999997,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T02:49:48.242312+00:00",
@@ -276,7 +608,11 @@
       "probability": 0.4374184061209523,
       "cost": 0.36,
       "result": "no",
-      "pnl": 0.64
+      "pnl": 0.64,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T02:01:59.296954+00:00",
@@ -285,7 +621,11 @@
       "probability": 0.7494569317942409,
       "cost": 0.54,
       "result": "yes",
-      "pnl": 0.45999999999999996
+      "pnl": 0.45999999999999996,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-21T00:48:25.928551+00:00",
@@ -294,7 +634,11 @@
       "probability": 0.5929288459614174,
       "cost": 0.31000000000000005,
       "result": "no",
-      "pnl": 0.69
+      "pnl": 0.69,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-20T23:57:08.713314+00:00",
@@ -303,7 +647,11 @@
       "probability": 0.05,
       "cost": null,
       "result": "no",
-      "pnl": 0.0
+      "pnl": 0.0,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-20T23:13:34.779380+00:00",
@@ -312,7 +660,11 @@
       "probability": 0.40083777922937724,
       "cost": 0.10999999999999999,
       "result": "no",
-      "pnl": 0.89
+      "pnl": 0.89,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-20T22:27:02.150754+00:00",
@@ -321,7 +673,11 @@
       "probability": 0.1434455011238045,
       "cost": null,
       "result": "no",
-      "pnl": 0.0
+      "pnl": 0.0,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-20T21:38:29.315763+00:00",
@@ -330,7 +686,11 @@
       "probability": 0.7662094449098964,
       "cost": 0.08799999999999997,
       "result": "yes",
-      "pnl": -0.08799999999999997
+      "pnl": -0.08799999999999997,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-20T20:48:27.433205+00:00",
@@ -339,7 +699,11 @@
       "probability": 0.6511358889731814,
       "cost": 0.51,
       "result": "no",
-      "pnl": -0.51
+      "pnl": -0.51,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     },
     {
       "created_at": "2026-11-20T19:58:05.461761+00:00",
@@ -348,7 +712,11 @@
       "probability": 0.287876883928194,
       "cost": 0.0020000000000000018,
       "result": "no",
-      "pnl": -0.0020000000000000018
+      "pnl": -0.0020000000000000018,
+      "model_version": null,
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": null
     }
   ]
 }
