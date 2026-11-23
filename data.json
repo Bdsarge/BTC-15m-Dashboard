@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-23T11:34:01.779960+00:00",
+  "updated_at": "2026-11-23T12:34:12.745192+00:00",
   "metrics": {
-    "settled_contracts": 71,
-    "paper_predictions": 51,
-    "wins": 20,
-    "win_rate": 0.3922,
-    "gross_pnl": 3.849,
+    "settled_contracts": 72,
+    "paper_predictions": 52,
+    "wins": 21,
+    "win_rate": 0.4038,
+    "gross_pnl": 4.059,
     "estimated_net_pnl": null,
-    "net_pnl_coverage": 19
+    "net_pnl_coverage": 20
   },
   "versions": {
     "heuristic-v1": {
@@ -20,13 +20,13 @@
       "net_pnl_coverage": 0
     },
     "heuristic-v2": {
-      "settled_contracts": 34,
-      "paper_predictions": 19,
-      "wins": 8,
-      "win_rate": 0.4211,
-      "gross_pnl": 0.427,
-      "estimated_net_pnl": 0.127,
-      "net_pnl_coverage": 19
+      "settled_contracts": 35,
+      "paper_predictions": 20,
+      "wins": 9,
+      "win_rate": 0.45,
+      "gross_pnl": 0.637,
+      "estimated_net_pnl": 0.317,
+      "net_pnl_coverage": 20
     }
   },
   "equity_curve": [
@@ -335,20 +335,39 @@
       "ticker": "KXBTC15M-26NOV230600-00",
       "gross": 3.849,
       "v2_estimated_net": 0.127
+    },
+    {
+      "time": "2026-11-23T11:34:01.650007+00:00",
+      "ticker": "KXBTC15M-26NOV230645-45",
+      "gross": 4.059,
+      "v2_estimated_net": 0.317
     }
   ],
   "predictions": [
+    {
+      "created_at": "2026-11-23T12:34:12.620997+00:00",
+      "ticker": "KXBTC15M-26NOV230745-45",
+      "direction": "NO TRADE",
+      "probability": 0.48216980887377486,
+      "cost": null,
+      "result": null,
+      "pnl": null,
+      "model_version": "heuristic-v2",
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": 10.795
+    },
     {
       "created_at": "2026-11-23T11:34:01.650007+00:00",
       "ticker": "KXBTC15M-26NOV230645-45",
       "direction": "UP",
       "probability": 0.8721691052626346,
       "cost": 0.79,
-      "result": null,
-      "pnl": null,
+      "result": "yes",
+      "pnl": 0.20999999999999996,
       "model_version": "heuristic-v2",
       "fee_estimate": 0.02,
-      "net_pnl": null,
+      "net_pnl": 0.18999999999999997,
       "minutes_remaining": 10.979
     },
     {
