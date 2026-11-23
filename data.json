@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-23T16:41:50.946859+00:00",
+  "updated_at": "2026-11-23T17:37:30.104402+00:00",
   "metrics": {
-    "settled_contracts": 76,
-    "paper_predictions": 54,
+    "settled_contracts": 77,
+    "paper_predictions": 55,
     "wins": 21,
-    "win_rate": 0.3889,
-    "gross_pnl": 4.023,
+    "win_rate": 0.3818,
+    "gross_pnl": 4.021,
     "estimated_net_pnl": null,
-    "net_pnl_coverage": 22
+    "net_pnl_coverage": 23
   },
   "versions": {
     "heuristic-v1": {
@@ -20,13 +20,13 @@
       "net_pnl_coverage": 0
     },
     "heuristic-v2": {
-      "settled_contracts": 39,
-      "paper_predictions": 22,
+      "settled_contracts": 40,
+      "paper_predictions": 23,
       "wins": 9,
-      "win_rate": 0.4091,
-      "gross_pnl": 0.601,
-      "estimated_net_pnl": 0.261,
-      "net_pnl_coverage": 22
+      "win_rate": 0.3913,
+      "gross_pnl": 0.599,
+      "estimated_net_pnl": 0.249,
+      "net_pnl_coverage": 23
     }
   },
   "equity_curve": [
@@ -353,20 +353,39 @@
       "ticker": "KXBTC15M-26NOV231000-00",
       "gross": 4.023,
       "v2_estimated_net": 0.261
+    },
+    {
+      "time": "2026-11-23T16:41:50.806834+00:00",
+      "ticker": "KXBTC15M-26NOV231145-45",
+      "gross": 4.021,
+      "v2_estimated_net": 0.249
     }
   ],
   "predictions": [
+    {
+      "created_at": "2026-11-23T17:37:29.990247+00:00",
+      "ticker": "KXBTC15M-26NOV231245-45",
+      "direction": "NO TRADE",
+      "probability": 0.495557083654843,
+      "cost": null,
+      "result": null,
+      "pnl": null,
+      "model_version": "heuristic-v2",
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": 7.507
+    },
     {
       "created_at": "2026-11-23T16:41:50.806834+00:00",
       "ticker": "KXBTC15M-26NOV231145-45",
       "direction": "UP",
       "probability": 0.05,
       "cost": 0.002,
-      "result": null,
-      "pnl": null,
+      "result": "no",
+      "pnl": -0.002,
       "model_version": "heuristic-v2",
       "fee_estimate": 0.01,
-      "net_pnl": null,
+      "net_pnl": -0.012,
       "minutes_remaining": 3.157
     },
     {
