@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-25T04:50:34.432911+00:00",
+  "updated_at": "2026-11-25T05:43:40.460176+00:00",
   "metrics": {
-    "settled_contracts": 111,
-    "paper_predictions": 69,
+    "settled_contracts": 112,
+    "paper_predictions": 70,
     "wins": 26,
-    "win_rate": 0.3768,
-    "gross_pnl": 4.203,
+    "win_rate": 0.3714,
+    "gross_pnl": 3.543,
     "estimated_net_pnl": null,
-    "net_pnl_coverage": 37
+    "net_pnl_coverage": 38
   },
   "versions": {
     "heuristic-v1": {
@@ -20,13 +20,13 @@
       "net_pnl_coverage": 0
     },
     "heuristic-v2": {
-      "settled_contracts": 74,
-      "paper_predictions": 37,
+      "settled_contracts": 75,
+      "paper_predictions": 38,
       "wins": 14,
-      "win_rate": 0.3784,
-      "gross_pnl": 0.781,
-      "estimated_net_pnl": 0.251,
-      "net_pnl_coverage": 37
+      "win_rate": 0.3684,
+      "gross_pnl": 0.121,
+      "estimated_net_pnl": -0.429,
+      "net_pnl_coverage": 38
     }
   },
   "equity_curve": [
@@ -443,6 +443,12 @@
       "ticker": "KXBTC15M-26NOV242200-00",
       "gross": 4.203,
       "v2_estimated_net": 0.251
+    },
+    {
+      "time": "2026-11-25T04:50:33.808086+00:00",
+      "ticker": "KXBTC15M-26NOV250000-00",
+      "gross": 3.543,
+      "v2_estimated_net": -0.429
     }
   ],
   "predictions": [
@@ -452,11 +458,11 @@
       "direction": "DOWN",
       "probability": 0.21924925713537335,
       "cost": 0.66,
-      "result": null,
-      "pnl": null,
+      "result": "yes",
+      "pnl": -0.66,
       "model_version": "heuristic-v2",
       "fee_estimate": 0.02,
-      "net_pnl": null,
+      "net_pnl": -0.68,
       "minutes_remaining": 9.442
     },
     {
