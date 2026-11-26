@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-26T00:09:00.677990+00:00",
+  "updated_at": "2026-11-26T01:19:35.906863+00:00",
   "metrics": {
-    "settled_contracts": 128,
+    "settled_contracts": 129,
     "paper_predictions": 79,
     "wins": 27,
     "win_rate": 0.3418,
@@ -20,7 +20,7 @@
       "net_pnl_coverage": 0
     },
     "heuristic-v2": {
-      "settled_contracts": 91,
+      "settled_contracts": 92,
       "paper_predictions": 47,
       "wins": 15,
       "win_rate": 0.3191,
@@ -507,16 +507,29 @@
   ],
   "predictions": [
     {
-      "created_at": "2026-11-26T00:09:00.377681+00:00",
-      "ticker": "KXBTC15M-26NOV251915-15",
+      "created_at": "2026-11-26T01:19:35.812056+00:00",
+      "ticker": "KXBTC15M-26NOV252030-30",
       "direction": "NO TRADE",
-      "probability": 0.7358270737746859,
+      "probability": 0.42950483333119027,
       "cost": null,
       "result": null,
       "pnl": null,
       "model_version": "heuristic-v2",
       "fee_estimate": null,
       "net_pnl": null,
+      "minutes_remaining": 10.409
+    },
+    {
+      "created_at": "2026-11-26T00:09:00.377681+00:00",
+      "ticker": "KXBTC15M-26NOV251915-15",
+      "direction": "NO TRADE",
+      "probability": 0.7358270737746859,
+      "cost": null,
+      "result": "yes",
+      "pnl": 0.0,
+      "model_version": "heuristic-v2",
+      "fee_estimate": null,
+      "net_pnl": 0.0,
       "minutes_remaining": 6.001
     },
     {
@@ -1788,19 +1801,6 @@
       "cost": 0.01200000000000001,
       "result": "yes",
       "pnl": -0.01200000000000001,
-      "model_version": null,
-      "fee_estimate": null,
-      "net_pnl": null,
-      "minutes_remaining": null
-    },
-    {
-      "created_at": "2026-11-21T22:29:19.199150+00:00",
-      "ticker": "KXBTC15M-26NOV211730-30",
-      "direction": "DOWN",
-      "probability": 0.24350117869042942,
-      "cost": 0.06299999999999994,
-      "result": "yes",
-      "pnl": -0.06299999999999994,
       "model_version": null,
       "fee_estimate": null,
       "net_pnl": null,
