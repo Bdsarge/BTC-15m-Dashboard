@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-26T21:20:23.941992+00:00",
+  "updated_at": "2026-11-26T22:17:54.807887+00:00",
   "metrics": {
-    "settled_contracts": 144,
-    "paper_predictions": 86,
-    "wins": 30,
-    "win_rate": 0.3488,
-    "gross_pnl": 1.519,
+    "settled_contracts": 145,
+    "paper_predictions": 87,
+    "wins": 31,
+    "win_rate": 0.3563,
+    "gross_pnl": 1.799,
     "estimated_net_pnl": null,
-    "net_pnl_coverage": 54
+    "net_pnl_coverage": 55
   },
   "versions": {
     "heuristic-v1": {
@@ -20,13 +20,13 @@
       "net_pnl_coverage": 0
     },
     "heuristic-v2": {
-      "settled_contracts": 107,
-      "paper_predictions": 54,
-      "wins": 18,
-      "win_rate": 0.3333,
-      "gross_pnl": -1.903,
-      "estimated_net_pnl": -2.713,
-      "net_pnl_coverage": 54
+      "settled_contracts": 108,
+      "paper_predictions": 55,
+      "wins": 19,
+      "win_rate": 0.3455,
+      "gross_pnl": -1.623,
+      "estimated_net_pnl": -2.453,
+      "net_pnl_coverage": 55
     }
   },
   "equity_curve": [
@@ -545,20 +545,39 @@
       "ticker": "KXBTC15M-26NOV261200-00",
       "gross": 1.519,
       "v2_estimated_net": -2.713
+    },
+    {
+      "time": "2026-11-26T21:20:23.817697+00:00",
+      "ticker": "KXBTC15M-26NOV261630-30",
+      "gross": 1.799,
+      "v2_estimated_net": -2.453
     }
   ],
   "predictions": [
+    {
+      "created_at": "2026-11-26T22:17:54.466197+00:00",
+      "ticker": "KXBTC15M-26NOV261730-30",
+      "direction": "NO TRADE",
+      "probability": 0.6995350603863835,
+      "cost": null,
+      "result": null,
+      "pnl": null,
+      "model_version": "heuristic-v2",
+      "fee_estimate": null,
+      "net_pnl": null,
+      "minutes_remaining": 12.1
+    },
     {
       "created_at": "2026-11-26T21:20:23.817697+00:00",
       "ticker": "KXBTC15M-26NOV261630-30",
       "direction": "UP",
       "probability": 0.8240953430555662,
       "cost": 0.72,
-      "result": null,
-      "pnl": null,
+      "result": "yes",
+      "pnl": 0.28,
       "model_version": "heuristic-v2",
       "fee_estimate": 0.02,
-      "net_pnl": null,
+      "net_pnl": 0.26,
       "minutes_remaining": 9.606
     },
     {
@@ -1834,19 +1853,6 @@
       "fee_estimate": null,
       "net_pnl": 0.0,
       "minutes_remaining": 11.159
-    },
-    {
-      "created_at": "2026-11-22T11:24:31.554693+00:00",
-      "ticker": "KXBTC15M-26NOV220630-30",
-      "direction": "UP",
-      "probability": 0.4187105838592433,
-      "cost": 0.33,
-      "result": "yes",
-      "pnl": 0.6699999999999999,
-      "model_version": "heuristic-v2",
-      "fee_estimate": 0.02,
-      "net_pnl": 0.6499999999999999,
-      "minutes_remaining": 5.483
     }
   ]
 }
