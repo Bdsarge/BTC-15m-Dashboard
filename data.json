@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-27T01:23:45.379598+00:00",
+  "updated_at": "2026-11-27T02:30:13.230909+00:00",
   "metrics": {
-    "settled_contracts": 147,
+    "settled_contracts": 148,
     "paper_predictions": 88,
     "wins": 32,
     "win_rate": 0.3636,
@@ -20,7 +20,7 @@
       "net_pnl_coverage": 0
     },
     "heuristic-v2": {
-      "settled_contracts": 110,
+      "settled_contracts": 111,
       "paper_predictions": 56,
       "wins": 20,
       "win_rate": 0.3571,
@@ -566,11 +566,11 @@
       "direction": "NO TRADE",
       "probability": 0.1349323111730345,
       "cost": null,
-      "result": null,
-      "pnl": null,
+      "result": "yes",
+      "pnl": 0.0,
       "model_version": "heuristic-v2",
       "fee_estimate": null,
-      "net_pnl": null,
+      "net_pnl": 0.0,
       "minutes_remaining": 6.25
     },
     {
